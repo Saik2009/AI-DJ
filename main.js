@@ -30,6 +30,27 @@ function draw() {
         rnlw = Floor(nlw);
         volume = rnlw / 500;
         song.setVolume(volume);
+        document.getElementById("volume").innerHTML="Volume- "+volume;
+    }
+    if(right_wrist_y>0 && right_wrist_y<=100){
+        song.rate(0.5);
+        document.getElementById("speed").innerHTML="Speed - 0.5x";
+    }
+    else if(right_wrist_y>100 && right_wrist_y<=200){
+        song.rate(1);
+        document.getElementById("speed").innerHTML="Speed - 1x";
+    }
+    else if(right_wrist_y>200 && right_wrist_y<=300){
+        song.rate(1.5);
+        document.getElementById("speed").innerHTML="Speed - 1.5x";
+    }
+    else if(right_wrist_y>300 && right_wrist_y<=400){
+        song.rate(2);
+        document.getElementById("speed").innerHTML="Speed - 2x";
+    }
+    else if(right_wrist_y>400 && right_wrist_y<=500){
+        song.rate(2.5);
+        document.getElementById("speed").innerHTML="Speed - 2.5x";
     }
 }
 
